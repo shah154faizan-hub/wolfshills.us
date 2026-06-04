@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wolf Shills — Global Marketing & Promotion Agency</title>
+<meta name="description" content="Wolf Shills is a premium global marketing agency. Crypto, Tech, Fashion, E-Commerce, Music, Sports & more. 100+ specialists. Proven results worldwide.">
+<meta name="keywords" content="global marketing agency, crypto marketing, social media marketing, brand promotion, influencer marketing, community management">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0D12;
+  --bg2:#0F1318;
+  --bg3:#141920;
+  --bg4:#1A2030;
+  --gold:#8BA7C7;
+  --gold2:#B0C8E4;
+  --gold3:#6A8AAA;
+  --silver:#C4CDD8;
+  --silver2:#6B7C8E;
+  --white:#EEF2F7;
+  --red:#E8453C;
+  --green:#2ECC71;
+  --border:rgba(139,167,199,0.14);
+  --border2:rgba(196,205,216,0.07);
+  --glow:rgba(139,167,199,0.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden;cursor:default}
+
+/* GRAIN */
+body::before{content:'';position:fixed;inset:0;opacity:.03;pointer-events:none;z-index:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(3,5,10,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.1em;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo-icon{font-size:22px;filter:drop-shadow(0 0 10px var(--gold))}
+.logo em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links a{color:var(--silver2);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold)!important;color:var(--bg)!important;padding:9px 22px;border-radius:4px;font-weight:700!important;letter-spacing:.06em;transition:background .2s,transform .2s!important}
+.nav-cta:hover{background:var(--gold2)!important;transform:translateY(-1px)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.burger span{width:22px;height:2px;background:var(--silver);border-radius:2px;display:block;transition:.3s}
+.mob-nav{display:none;position:fixed;inset:0;background:rgba(3,5,10,.98);z-index:290;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mob-nav.open{display:flex}
+.mob-nav a{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:.06em;color:var(--white);text-decoration:none;transition:color .2s}
+.mob-nav a:hover{color:var(--gold)}
+.mob-close{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--silver);font-size:28px;cursor:pointer}
+
+/* ── POPUP ── */
+.popup-overlay{display:none;position:fixed;inset:0;background:rgba(3,5,10,.85);z-index:500;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
+.popup-overlay.show{display:flex}
+.popup-box{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:48px 40px;max-width:480px;width:90%;position:relative;animation:popIn .4s cubic-bezier(.34,1.56,.64,1)}
+@keyframes popIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+.popup-close{position:absolute;top:16px;right:20px;background:none;border:none;color:var(--silver2);font-size:22px;cursor:pointer;transition:color .2s}
+.popup-close:hover{color:var(--white)}
+.popup-icon{font-size:48px;margin-bottom:16px;text-align:center}
+.popup-title{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:.04em;margin-bottom:10px;text-align:center}
+.popup-title span{color:var(--gold)}
+.popup-desc{font-size:15px;color:var(--silver);text-align:center;line-height:1.7;margin-bottom:28px}
+.popup-btn{display:block;width:100%;text-align:center;background:var(--gold);color:var(--bg);font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;padding:15px;border-radius:6px;text-decoration:none;transition:.2s}
+.popup-btn:hover{background:var(--gold2)}
+.popup-note{text-align:center;font-size:12px;color:var(--silver2);margin-top:14px}
+
+/* EXIT INTENT POPUP */
+.exit-popup{display:none;position:fixed;inset:0;background:rgba(3,5,10,.9);z-index:500;align-items:center;justify-content:center;backdrop-filter:blur(12px)}
+.exit-popup.show{display:flex}
+.exit-box{background:linear-gradient(135deg,var(--bg3),var(--bg4));border:1px solid rgba(139,167,199,.3);border-radius:20px;padding:52px 44px;max-width:520px;width:92%;position:relative;text-align:center;animation:popIn .4s cubic-bezier(.34,1.56,.64,1)}
+.exit-wolf{font-size:64px;margin-bottom:20px}
+.exit-title{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:.04em;margin-bottom:12px}
+.exit-title span{color:var(--gold)}
+.exit-desc{font-size:15px;color:var(--silver);line-height:1.7;margin-bottom:32px}
+.exit-btns{display:flex;flex-direction:column;gap:12px}
+.exit-yes{background:var(--gold);color:var(--bg);font-size:15px;font-weight:700;padding:16px;border-radius:6px;text-decoration:none;transition:.2s;display:block}
+.exit-yes:hover{background:var(--gold2)}
+.exit-no{background:none;border:none;color:var(--silver2);font-size:13px;cursor:pointer;padding:8px;transition:color .2s}
+.exit-no:hover{color:var(--white)}
+
+/* FLOATING CTA */
+.float-cta{position:fixed;bottom:28px;right:28px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.float-btn{background:var(--gold);color:var(--bg);font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;padding:14px 22px;border-radius:50px;text-decoration:none;display:flex;align-items:center;gap:8px;box-shadow:0 8px 32px rgba(139,167,199,.35);transition:.2s;animation:floatBob 3s ease-in-out infinite}
+.float-btn:hover{background:var(--gold2);transform:translateY(-3px);box-shadow:0 14px 40px rgba(139,167,199,.45)}
+@keyframes floatBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.float-pulse{width:12px;height:12px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+
+/* SECTIONS */
+section{position:relative;z-index:1}
+.container{max-width:1100px;margin:0 auto;padding:0 5%}
+.section-wrap{padding:96px 0;border-top:1px solid var(--border2)}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:20px;height:1px;background:var(--gold)}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,5vw,56px);line-height:1;letter-spacing:.03em;margin-bottom:16px}
+.sec-title span{color:var(--gold)}
+.sec-sub{font-size:16px;color:var(--silver);max-width:540px;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;padding:14px 30px;border-radius:5px;text-decoration:none;transition:.2s;cursor:pointer;border:none;letter-spacing:.03em}
+.btn-gold{background:var(--gold);color:var(--bg)}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 32px var(--glow)}
+.btn-ghost{background:transparent;color:var(--silver);border:1px solid var(--border2)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--white);transform:translateY(-2px)}
+
+/* ── HERO ── */
+#home{min-height:100vh;display:flex;align-items:center;padding-top:70px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 75% 45%,rgba(139,167,199,.09) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 10% 80%,rgba(139,167,199,.05) 0%,transparent 60%)}
+.hero-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(139,167,199,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(139,167,199,.03) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 100%)}
+.hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:80px 0}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(139,167,199,.08);border:1px solid rgba(139,167,199,.2);border-radius:100px;padding:7px 18px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;animation:fadeUp .7s ease both}
+.hero-tag::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1.htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(54px,8vw,96px);line-height:.95;letter-spacing:.02em;margin-bottom:24px;animation:fadeUp .7s .1s ease both}
+h1.htitle .l2{color:var(--gold);display:block}
+h1.htitle .l3{display:block;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.2)}
+.hero-desc{font-size:17px;color:var(--silver);max-width:500px;line-height:1.8;margin-bottom:16px;animation:fadeUp .7s .2s ease both}
+.hero-industries{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;animation:fadeUp .7s .25s ease both}
+.ind-tag{background:rgba(139,167,199,.07);border:1px solid rgba(139,167,199,.15);border-radius:100px;padding:5px 14px;font-size:12px;color:var(--gold);font-weight:500}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .7s .3s ease both}
+.hero-right{display:flex;align-items:center;justify-content:center;animation:fadeUp .7s .4s ease both}
+.emblem{position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center}
+.emblem::before{content:'';position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(139,167,199,.15) 0%,transparent 68%);animation:breathe 5s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.1);opacity:1}}
+.ring{position:absolute;border-radius:50%;border:1px solid rgba(139,167,199,.15)}
+.r1{width:280px;height:280px;border-style:dashed;animation:spin 22s linear infinite reverse}
+.r2{width:224px;height:224px;border-color:rgba(139,167,199,.1);animation:spin 16s linear infinite}
+.r3{width:168px;height:168px;border-style:dashed;animation:spin 30s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.wolf-big{font-size:96px;position:relative;z-index:2;filter:drop-shadow(0 0 30px rgba(139,167,199,.5));animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.hstats{display:flex;gap:0;margin-top:52px;border-top:1px solid var(--border2);padding-top:36px;animation:fadeUp .7s .5s ease both}
+.hs{flex:1;padding:0 24px 0 0;border-right:1px solid var(--border2)}
+.hs:last-child{border-right:none;padding-left:24px}
+.hs:first-child{padding-left:0}
+.hs-num{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold);line-height:1;margin-bottom:4px}
+.hs-lbl{font-size:11px;color:var(--silver2);text-transform:uppercase;letter-spacing:.08em;font-weight:500}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* TICKER */
+.ticker-wrap{background:#1A2535;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;overflow:hidden;position:relative;z-index:2}
+.ticker-track{display:flex;animation:ticker 30s linear infinite;width:max-content}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{display:flex;align-items:center;gap:12px;padding:0 32px;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.08em;color:var(--silver);white-space:nowrap}
+.ticker-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── INDUSTRIES ── */
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ind-card{background:var(--bg3);border:1px solid var(--border2);border-radius:14px;padding:28px 22px;text-align:center;transition:.3s;cursor:default}
+.ind-card:hover{border-color:rgba(139,167,199,.3);transform:translateY(-4px);background:var(--bg4)}
+.ind-icon{font-size:32px;margin-bottom:14px}
+.ind-name{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.04em;margin-bottom:6px}
+.ind-desc{font-size:13px;color:var(--silver2);line-height:1.5}
+
+/* ── SERVICES ── */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.svc-card{background:var(--bg2);border:1px solid var(--border2);border-radius:14px;padding:30px;transition:.3s;position:relative;overflow:hidden}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);opacity:0;transition:.3s}
+.svc-card:hover{border-color:rgba(139,167,199,.3);transform:translateY(-3px)}
+.svc-card:hover::before{opacity:1}
+.svc-card.wide{grid-column:span 2;background:linear-gradient(135deg,rgba(139,167,199,.06),rgba(139,167,199,.02))}
+.svc-icon{font-size:28px;margin-bottom:14px}
+.svc-name{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:.04em;margin-bottom:8px}
+.svc-desc{font-size:14px;color:var(--silver2);line-height:1.65;margin-bottom:14px}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:6px}
+.svc-list li{font-size:13px;color:var(--silver);display:flex;align-items:flex-start;gap:8px}
+.svc-list li::before{content:'→';color:var(--gold);font-size:11px;margin-top:3px;flex-shrink:0}
+.svc-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(139,167,199,.1);border:1px solid rgba(139,167,199,.2);border-radius:100px;padding:4px 12px;font-size:11px;color:var(--gold);font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em}
+
+/* CLIENTS MARQUEE */
+.marquee-wrap{overflow:hidden;position:relative;margin:40px 0}
+.marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2}
+.marquee-wrap::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.marquee-wrap::after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
+.marquee-track{display:flex;animation:marquee 28s linear infinite;width:max-content}
+.marquee-track:hover{animation-play-state:paused}
+.client-pill{display:flex;align-items:center;gap:10px;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:12px 22px;margin-right:12px;white-space:nowrap;font-size:13px;font-weight:500;color:var(--silver);transition:.2s}
+.client-pill:hover{border-color:var(--border);color:var(--white)}
+.client-pill span{font-size:16px}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* FEATURED CLIENT */
+.feat-card{background:linear-gradient(135deg,rgba(139,167,199,.1),rgba(139,167,199,.03));border:1px solid rgba(139,167,199,.25);border-radius:16px;padding:36px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin-top:36px}
+.feat-icon{font-size:52px}
+.feat-title{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.04em;margin-bottom:8px}
+.feat-title span{color:var(--gold)}
+.feat-desc{font-size:14px;color:var(--silver);line-height:1.7}
+.feat-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(139,167,199,.12);border-radius:100px;padding:5px 14px;font-size:11px;color:var(--gold);font-weight:600;margin-top:12px}
+
+/* PROOF */
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:32px}
+.pcard{background:var(--bg3);border:1px solid var(--border2);border-radius:12px;padding:26px;text-align:center;transition:.3s}
+.pcard:hover{border-color:var(--border);transform:translateY(-3px)}
+.pcard-num{font-family:'Bebas Neue',sans-serif;font-size:46px;color:var(--gold);line-height:1;margin-bottom:4px}
+.pcard-lbl{font-size:12px;color:var(--silver2);text-transform:uppercase;letter-spacing:.08em}
+.sheets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.sheet-link{display:flex;align-items:center;gap:12px;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:16px;text-decoration:none;color:var(--silver);font-size:13px;transition:.3s;font-weight:500}
+.sheet-link:hover{border-color:var(--border);color:var(--white);transform:translateY(-2px)}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pplan{background:var(--bg2);border:1px solid var(--border2);border-radius:18px;padding:36px;transition:.3s;position:relative}
+.pplan:hover{border-color:rgba(139,167,199,.25);transform:translateY(-4px)}
+.pplan.feat{background:linear-gradient(160deg,rgba(139,167,199,.1),rgba(139,167,199,.03));border-color:rgba(139,167,199,.3)}
+.pplan.feat::before{content:'MOST POPULAR';position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--bg);font-size:10px;font-weight:700;letter-spacing:.14em;padding:5px 16px;border-radius:100px}
+.plan-name{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.05em;margin-bottom:6px}
+.plan-price{font-family:'Bebas Neue',sans-serif;font-size:60px;color:var(--gold);line-height:1;margin-bottom:4px}
+.plan-period{font-size:13px;color:var(--silver2);margin-bottom:8px}
+.plan-desc{font-size:13px;color:var(--silver);margin-bottom:20px;line-height:1.6;border-bottom:1px solid var(--border2);padding-bottom:20px}
+.plan-features{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:28px}
+.plan-features li{font-size:13px;color:var(--silver);display:flex;align-items:flex-start;gap:9px}
+.plan-features li .ck{color:var(--gold);font-size:14px;flex-shrink:0;margin-top:1px}
+.plan-features li.off{color:var(--silver2)}
+.plan-features li.off .ck{color:var(--silver2)}
+.plan-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(139,167,199,.08);border:1px solid rgba(139,167,199,.15);border-radius:4px;padding:3px 10px;font-size:11px;color:var(--gold);font-weight:600;margin-bottom:12px}
+
+/* REVIEWS */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+.rcard{background:var(--bg2);border:1px solid var(--border2);border-radius:14px;padding:26px;transition:.3s;position:relative}
+.rcard:hover{border-color:rgba(139,167,199,.2);transform:translateY(-2px)}
+.rcard-top{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.rcard-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold3),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--bg);flex-shrink:0}
+.rcard-author{font-size:14px;font-weight:600;color:var(--white)}
+.rcard-role{font-size:12px;color:var(--silver2)}
+.rcard-stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:12px}
+.rcard-text{font-size:14px;color:var(--silver);line-height:1.7;font-style:italic}
+.rcard-project{display:inline-flex;align-items:center;gap:6px;background:rgba(139,167,199,.08);border-radius:100px;padding:4px 12px;font-size:11px;color:var(--gold);font-weight:500;margin-top:14px}
+.verified{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--green);position:absolute;top:16px;right:16px;font-weight:600}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-text p{font-size:15px;color:var(--silver);margin-bottom:18px;line-height:1.8}
+.about-text p strong{color:var(--white);font-weight:600}
+.about-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.abadge{background:var(--bg3);border:1px solid var(--border);border-radius:100px;padding:8px 18px;font-size:13px;color:var(--gold);font-weight:500}
+.about-visual{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.av-card{background:var(--bg3);border:1px solid var(--border2);border-radius:12px;padding:22px;transition:.3s}
+.av-card:hover{border-color:var(--border);transform:translateY(-3px)}
+.av-icon{font-size:26px;margin-bottom:10px}
+.av-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.04em;margin-bottom:6px}
+.av-desc{font-size:13px;color:var(--silver2);line-height:1.5}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.contact-info p{font-size:15px;color:var(--silver);line-height:1.8;margin-bottom:22px}
+.clinks{display:flex;flex-direction:column;gap:12px}
+.clink{display:flex;align-items:center;gap:14px;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:16px 20px;text-decoration:none;color:var(--white);font-size:14px;font-weight:500;transition:.3s}
+.clink:hover{border-color:var(--border);transform:translateX(4px)}
+.clink-icon{font-size:22px;width:32px;text-align:center;flex-shrink:0}
+.clink-lbl{font-size:11px;color:var(--silver2);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+.contact-box{background:linear-gradient(135deg,rgba(139,167,199,.1),rgba(139,167,199,.03));border:1px solid rgba(139,167,199,.25);border-radius:18px;padding:44px;text-align:center}
+.cb-icon{font-size:56px;margin-bottom:16px}
+.cb-title{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:.04em;margin-bottom:12px}
+.cb-desc{font-size:15px;color:var(--silver);line-height:1.7;margin-bottom:28px}
+.cb-btns{display:flex;flex-direction:column;gap:12px}
+
+/* FOOTER */
+footer{padding:52px 0;border-top:1px solid var(--border2);text-align:center;position:relative;z-index:1}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:.08em;margin-bottom:8px}
+.footer-logo em{color:var(--gold);font-style:normal}
+.footer-sub{font-size:13px;color:var(--silver2);margin-bottom:20px}
+.footer-nav{display:flex;justify-content:center;gap:24px;list-style:none;margin-bottom:24px;flex-wrap:wrap}
+.footer-nav a{font-size:12px;color:var(--silver2);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;transition:color .2s}
+.footer-nav a:hover{color:var(--gold)}
+.footer-copy{font-size:12px;color:var(--silver2)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-right{display:none}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .svc-grid,.pricing-grid,.rev-grid{grid-template-columns:1fr}
+  .svc-card.wide{grid-column:span 1}
+  .ind-grid{grid-template-columns:1fr 1fr}
+  .proof-grid,.sheets-grid{grid-template-columns:1fr 1fr}
+  .feat-card{grid-template-columns:1fr;text-align:center}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .ind-grid{grid-template-columns:1fr 1fr}
+  .proof-grid,.sheets-grid{grid-template-columns:1fr}
+  .hstats{flex-wrap:wrap}
+  .hs{min-width:40%}
+  .about-visual{grid-template-columns:1fr}
+  .popup-box,.exit-box{padding:36px 24px}
+  .float-cta{bottom:16px;right:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- WELCOME POPUP (shows after 3 seconds) -->
+<div class="popup-overlay" id="welcomePopup">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup('welcomePopup')">✕</button>
+    <div class="popup-icon">🐺</div>
+    <div class="popup-title">Welcome to <span>Wolf Shills</span></div>
+    <div class="popup-desc">We're a premium global marketing agency trusted by 50+ brands worldwide. Get a FREE strategy consultation for your project today.</div>
+    <a href="https://t.me/alexiaforge" target="_blank" class="popup-btn">Get Free Consultation →</a>
+    <p class="popup-note">No commitment required • Reply within 1 hour</p>
+  </div>
+</div>
+
+<!-- EXIT INTENT POPUP -->
+<div class="exit-popup" id="exitPopup">
+  <div class="exit-box">
+    <button class="popup-close" onclick="closePopup('exitPopup')" style="position:absolute;top:16px;right:20px;background:none;border:none;color:var(--silver2);font-size:22px;cursor:pointer">✕</button>
+    <div class="exit-wolf">🐺</div>
+    <div class="exit-title">Wait! Don't <span>Leave Yet</span></div>
+    <div class="exit-desc">Get a FREE custom marketing strategy for your brand — no strings attached. Our team responds within 60 minutes.</div>
+    <div class="exit-btns">
+      <a href="https://t.me/alexiaforge" target="_blank" class="exit-yes">Yes, I Want Free Strategy →</a>
+      <button class="exit-no" onclick="closePopup('exitPopup')">No thanks, I'll pass</button>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING CTA -->
+<div class="float-cta">
+  <a href="https://t.me/alexiaforge" target="_blank" class="float-btn">
+    <div class="float-pulse"></div>
+    Chat With Us
+  </a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="logo"><span class="logo-icon">🐺</span>Wolf<em>Shills</em></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="https://t.me/alexiaforge" target="_blank" class="nav-cta">Get Started</a></li>
+  </ul>
+  <button class="burger" onclick="document.querySelector('.mob-nav').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mob-nav">
+  <button class="mob-close" onclick="document.querySelector('.mob-nav').classList.remove('open')">✕</button>
+  <a href="#home" onclick="document.querySelector('.mob-nav').classList.remove('open')">Home</a>
+  <a href="#about" onclick="document.querySelector('.mob-nav').classList.remove('open')">About</a>
+  <a href="#industries" onclick="document.querySelector('.mob-nav').classList.remove('open')">Industries</a>
+  <a href="#services" onclick="document.querySelector('.mob-nav').classList.remove('open')">Services</a>
+  <a href="#pricing" onclick="document.querySelector('.mob-nav').classList.remove('open')">Pricing</a>
+  <a href="#reviews" onclick="document.querySelector('.mob-nav').classList.remove('open')">Reviews</a>
+  <a href="https://t.me/alexiaforge" target="_blank">Contact</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag">🌍 Global Marketing Agency</div>
+        <h1 class="htitle">YOUR BRAND.<span class="l2">OUR MISSION.</span><span class="l3">WORLD STAGE.</span></h1>
+        <p class="hero-desc">Wolf Shills is an elite global marketing agency with 100+ specialists delivering real engagement, explosive growth, and measurable results — across every industry, on every platform.</p>
+        <div class="hero-industries">
+          <span class="ind-tag">🪙 Crypto</span>
+          <span class="ind-tag">💻 Tech & AI</span>
+          <span class="ind-tag">👗 Fashion</span>
+          <span class="ind-tag">🎵 Music</span>
+          <span class="ind-tag">🛒 E-Commerce</span>
+          <span class="ind-tag">⚽ Sports</span>
+          <span class="ind-tag">🎮 Gaming</span>
+          <span class="ind-tag">🏢 Real Estate</span>
+        </div>
+        <div class="hero-btns">
+          <a href="https://t.me/alexiaforge" target="_blank" class="btn btn-gold">🐺 Start Your Campaign</a>
+          <a href="#services" class="btn btn-ghost">View Services →</a>
+        </div>
+        <div class="hstats">
+          <div class="hs"><div class="hs-num">100+</div><div class="hs-lbl">Specialists</div></div>
+          <div class="hs"><div class="hs-num">70+</div><div class="hs-lbl">Brands Served</div></div>
+          <div class="hs"><div class="hs-num">24/7</div><div class="hs-lbl">Coverage</div></div>
+          <div class="hs"><div class="hs-num">5K+</div><div class="hs-lbl">Daily Reach</div></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="emblem">
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+          <div class="wolf-big">🐺</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <div class="ticker-item"><span class="ticker-dot"></span>CRYPTO MARKETING</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>SOCIAL MEDIA GROWTH</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>INFLUENCER CAMPAIGNS</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>COMMUNITY MANAGEMENT</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>BRAND PROMOTION</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>SEO & CONTENT</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>PR & MEDIA OUTREACH</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>GLOBAL REACH</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>CRYPTO MARKETING</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>SOCIAL MEDIA GROWTH</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>INFLUENCER CAMPAIGNS</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>COMMUNITY MANAGEMENT</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>BRAND PROMOTION</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>SEO & CONTENT</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>PR & MEDIA OUTREACH</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>GLOBAL REACH</div>
+  </div>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="section-wrap reveal">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="eyebrow">Who We Are</div>
+          <h2 class="sec-title">A Global Pack Built for <span>Results</span></h2>
+          <p>Wolf Shills started as a crypto marketing force and evolved into a <strong>full-service global marketing agency</strong> trusted by brands across every major industry. From blockchain startups to fashion labels, from AI companies to music artists — we deliver real growth.</p>
+          <p>Our 100+ member team consists of <strong>crypto-native marketers, social media specialists, content creators, SEO experts, PR professionals, and outreach specialists</strong> operating 24/7 across every time zone.</p>
+          <p>We've worked with some of the most recognized names in the world — including <strong>Kevin O'Leary's Stratos and Box Elder Data Centre</strong> — delivering transparent, measurable campaigns with daily proof.</p>
+          <div class="about-badges">
+            <span class="abadge">✅ 100+ Specialists</span>
+            <span class="abadge">📊 Daily Reporting</span>
+            <span class="abadge">🌍 Global Coverage</span>
+            <span class="abadge">⚡ 1-Hour Response</span>
+            <span class="abadge">🔒 Proven Track Record</span>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="av-card"><div class="av-icon">🧠</div><div class="av-title">Industry Experts</div><div class="av-desc">Native specialists in every niche from crypto to fashion to sports.</div></div>
+          <div class="av-card"><div class="av-icon">📋</div><div class="av-title">Full Transparency</div><div class="av-desc">Every action tracked in live Google Sheets. Zero black boxes.</div></div>
+          <div class="av-card"><div class="av-icon">🌐</div><div class="av-title">All Platforms</div><div class="av-desc">Twitter, TikTok, Instagram, Telegram, Discord, YouTube and more.</div></div>
+          <div class="av-card"><div class="av-icon">⚙️</div><div class="av-title">Fully Custom</div><div class="av-desc">Every campaign tailored to your brand's specific goals and budget.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INDUSTRIES ══ -->
+<section id="industries">
+  <div class="section-wrap reveal">
+    <div class="container">
+      <div class="eyebrow">Who We Serve</div>
+      <h2 class="sec-title">Every Industry. <span>One Agency.</span></h2>
+      <p class="sec-sub" style="margin-bottom:48px">We don't just do crypto. Wolf Shills serves brands across every major global industry with specialized marketing teams for each.</p>
+      <div class="ind-grid">
+        <div class="ind-card"><div class="ind-icon">🪙</div><div class="ind-name">Crypto & Web3</div><div class="ind-desc">Token launches, NFT projects, DeFi protocols, blockchain startups</div></div>
+        <div class="ind-card"><div class="ind-icon">💻</div><div class="ind-name">Tech & AI</div><div class="ind-desc">SaaS products, AI tools, apps, software companies</div></div>
+        <div class="ind-card"><div class="ind-icon">👗</div><div class="ind-name">Fashion & Lifestyle</div><div class="ind-desc">Clothing brands, luxury goods, beauty, accessories</div></div>
+        <div class="ind-card"><div class="ind-icon">🎵</div><div class="ind-name">Music & Entertainment</div><div class="ind-desc">Artists, labels, streaming, events, entertainment brands</div></div>
+        <div class="ind-card"><div class="ind-icon">🛒</div><div class="ind-name">E-Commerce</div><div class="ind-desc">Online stores, Shopify brands, Amazon sellers, product launches</div></div>
+        <div class="ind-card"><div class="ind-icon">⚽</div><div class="ind-name">Sports & Fitness</div><div class="ind-desc">Sports teams, athletes, fitness brands, supplements</div></div>
+        <div class="ind-card"><div class="ind-icon">🎮</div><div class="ind-name">Gaming</div><div class="ind-desc">Game studios, esports teams, gaming influencers, platforms</div></div>
+        <div class="ind-card"><div class="ind-icon">🏢</div><div class="ind-name">Real Estate & Finance</div><div class="ind-desc">Property brands, investment firms, financial services</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <div class="section-wrap reveal">
+    <div class="container">
+      <div class="eyebrow">What We Offer</div>
+      <h2 class="sec-title">Full-Stack <span>Global Marketing</span></h2>
+      <p class="sec-sub" style="margin-bottom:48px">Every service your brand needs — managed end to end by our specialist teams on every major platform worldwide.</p>
+      <div class="svc-grid">
+        <div class="svc-card wide">
+          <div class="svc-badge">⭐ Most Requested</div>
+          <div class="svc-icon">💬</div>
+          <div class="svc-name">Community Management — 24/7 Across All Platforms</div>
+          <div class="svc-desc">Your community never sleeps and neither does our team. 70+ active specialists keep discussions live, engaging, and growing around the clock — supervised by 4 senior moderators.</div>
+          <ul class="svc-list">
+            <li>Telegram & Discord: real-time market & industry discussions, news, memes, engagement</li>
+            <li>Twitter/X & Reddit: active brand presence, trend participation, community growth</li>
+            <li>Daily moderator reports and community health summaries</li>
+            <li>Crisis management and negative sentiment control</li>
+          </ul>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">🐦</div>
+          <div class="svc-name">Social Media Amplification</div>
+          <div class="svc-desc">Real accounts, real engagement amplifying your brand every day across all major platforms.</div>
+          <ul class="svc-list">
+            <li>70+ Twitter/X ambassadors — likes, retweets, quality comments</li>
+            <li>Instagram, TikTok, Facebook, YouTube engagement</li>
+            <li>5,000+ daily reach across platforms</li>
+            <li>Accounts with genuine, established followings</li>
+          </ul>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">📣</div>
+          <div class="svc-name">Content Creation & Posting</div>
+          <div class="svc-desc">Consistent, algorithm-optimized content keeping your brand visible and growing.</div>
+          <ul class="svc-list">
+            <li>50+ posts about your brand daily across platforms</li>
+            <li>SEO-optimized with proper hashtags, tags & keywords</li>
+            <li>Custom graphics, memes & viral content</li>
+            <li>Blog posts, press releases & articles</li>
+          </ul>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">🎯</div>
+          <div class="svc-name">Influencer & Ambassador Outreach</div>
+          <div class="svc-desc">Connect your brand with the right voices in your industry for authentic promotion.</div>
+          <ul class="svc-list">
+            <li>Micro and macro influencer partnerships</li>
+            <li>Sponsored content and product reviews</li>
+            <li>Brand ambassador programs</li>
+            <li>KOL (Key Opinion Leader) campaigns</li>
+          </ul>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">📊</div>
+          <div class="svc-name">CMC & Listing Management</div>
+          <div class="svc-desc">Dominate CoinMarketCap and exchange listings where serious investors check first.</div>
+          <ul class="svc-list">
+            <li>70+ bullish reactions & votes daily</li>
+            <li>Quality comments by real verified accounts</li>
+            <li>Binance Square, CoinGecko, DexTools presence</li>
+            <li>Exchange listing support & visibility</li>
+          </ul>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">🔍</div>
+          <div class="svc-name">SEO & Online Reputation</div>
+          <div class="svc-desc">Make your brand impossible to miss on Google and all major search platforms.</div>
+          <ul class="svc-list">
+            <li>Search engine optimization for your website</li>
+            <li>Google News & press coverage</li>
+            <li>Online reputation management</li>
+            <li>Review generation & management</li>
+          </ul>
+        </div>
+        <div class="svc-card wide">
+          <div class="svc-badge">🚀 Highest ROI</div>
+          <div class="svc-icon">📡</div>
+          <div class="svc-name">Strategic Outreach Campaign — 200+ Daily Actions with Full Proof</div>
+          <div class="svc-desc">Our most powerful growth engine. Every single action logged and delivered as daily proof via live Google Sheets. Works for any brand, any industry.</div>
+          <ul class="svc-list">
+            <li><strong style="color:var(--white)">Platform Influencer Outreach (50%)</strong> — Engage target audiences under major influencers in your niche with direct mentions and links</li>
+            <li><strong style="color:var(--white)">Organic Community Outreach (15%)</strong> — Natural peer conversations that authentically introduce your brand to new audiences</li>
+            <li><strong style="color:var(--white)">Direct Message Campaigns (28%)</strong> — Personalized DMs to highly targeted potential customers and investors</li>
+            <li><strong style="color:var(--white)">Group & Forum Activity (7%)</strong> — Active discussion in relevant communities driving qualified traffic to your brand</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLIENTS ══ -->
+<section id="clients">
+  <div class="section-wrap reveal">
+    <div class="container">
+      <div class="eyebrow">Trusted By</div>
+      <h2 class="sec-title">Brands We've <span>Powered</span></h2>
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <div class="client-pill"><span>🐕</span>Dogecoin</div>
+          <div class="client-pill"><span>🎨</span>Punkvism</div>
+          <div class="client-pill"><span>💎</span>Encore DeFi</div>
+          <div class="client-pill"><span>🤖</span>Inflectiv AI</div>
+          <div class="client-pill"><span>🧠</span>MyNeutron AI</div>
+          <div class="client-pill"><span>🫘</span>Beanbee AI</div>
+          <div class="client-pill"><span>🌐</span>Metaverse Estate</div>
+          <div class="client-pill"><span>💡</span>Lumichill</div>
+          <div class="client-pill"><span>🪙</span>Tela Coin</div>
+          <div class="client-pill"><span>🚗</span>Lost Tesla Car</div>
+          <div class="client-pill"><span>📦</span>Stratos</div>
+          <div class="client-pill"><span>🏗️</span>Box Elder Data</div>
+          <div class="client-pill"><span>🔢</span>DoubleN</div>
+          <div class="client-pill"><span>💳</span>Paytora Wallet</div>
+          <div class="client-pill"><span>📈</span>TrendX</div>
+          <div class="client-pill"><span>🥽</span>Virtual XRI</div>
+          <div class="client-pill"><span>🏆</span>Polywin</div>
+          <div class="client-pill"><span>🔗</span>ChainVault</div>
+          <div class="client-pill"><span>🌊</span>AquaFi</div>
+          <div class="client-pill"><span>⚡</span>FlashDAO</div>
+          <div class="client-pill"><span>🛡️</span>SecureNet Pro</div>
+          <div class="client-pill"><span>🚀</span>OrbitX Labs</div>
+          <div class="client-pill"><span>💠</span>NexLayer</div>
+          <div class="client-pill"><span>🎯</span>TargetFi</div>
+          <!-- duplicate for seamless loop -->
+          <div class="client-pill"><span>🐕</span>Dogecoin</div>
+          <div class="client-pill"><span>🎨</span>Punkvism</div>
+          <div class="client-pill"><span>💎</span>Encore DeFi</div>
+          <div class="client-pill"><span>🤖</span>Inflectiv AI</div>
+          <div class="client-pill"><span>🧠</span>MyNeutron AI</div>
+          <div class="client-pill"><span>🫘</span>Beanbee AI</div>
+          <div class="client-pill"><span>🌐</span>Metaverse Estate</div>
+          <div class="client-pill"><span>💡</span>Lumichill</div>
+          <div class="client-pill"><span>🪙</span>Tela Coin</div>
+          <div class="client-pill"><span>🚗</span>Lost Tesla Car</div>
+          <div class="client-pill"><span>📦</span>Stratos</div>
+          <div class="client-pill"><span>🏗️</span>Box Elder Data</div>
+          <div class="client-pill"><span>🔢</span>DoubleN</div>
+          <div class="client-pill"><span>💳</span>Paytora Wallet</div>
+          <div class="client-pill"><span>📈</span>TrendX</div>
+          <div class="client-pill"><span>🥽</span>Virtual XRI</div>
+          <div class="client-pill"><span>🏆</span>Polywin</div>
+          <div class="client-pill"><span>🔗</span>ChainVault</div>
+          <div class="client-pill"><span>🌊</span>AquaFi</div>
+          <div class="client-pill"><span>⚡</span>FlashDAO</div>
+          <div class="client-pill"><span>🛡️</span>SecureNet Pro</div>
+          <div class="client-pill"><span>🚀</span>OrbitX Labs</div>
+          <div class="client-pill"><span>💠</span>NexLayer</div>
+          <div class="client-pill"><span>🎯</span>TargetFi</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROOF ══ -->
+<section id="proof">
+  <div class="section-wrap reveal">
+    <div class="container">
+      <div class="eyebrow">Proof of Work</div>
+      <h2 class="sec-title">Real Numbers. <span>Live Data.</span></h2>
+      <p class="sec-sub" style="margin-bottom:40px">Every campaign is tracked in real time. No guessing — just verified daily delivery sheets available to every client.</p>
+      <div class="proof-grid">
+        <div class="pcard"><div class="pcard-num">387K</div><div class="pcard-lbl">Single Post Peak Reach</div></div>
+        <div class="pcard"><div class="pcard-num">2,800+</div><div class="pcard-lbl">CMC Reactions (30 days)</div></div>
+        <div class="pcard"><div class="pcard-num">6,000+</div><div class="pcard-lbl">Total Outreach Actions</div></div>
+        <div class="pcard"><div class="pcard-num">50K+</div><div class="pcard-lbl">Avg Daily Post Reach</div></div>
+        <div class="pcard"><div class="pcard-num">8+</div><div class="pcard-lbl">Platforms Covered Daily</div></div>
+        <div class="pcard"><div class="pcard-num">50+</div><div class="pcard-lbl">Successful Campaigns</div></div>
+      </div>
+      <p style="font-size:13px;color:var(--silver2);margin-bottom:14px;font-weight:600;text-transform:uppercase;letter-spacing:.08em">📁 Live Campaign Reports</p>
+      <div class="sheets-grid">
+        <a href="https://docs.google.com/spreadsheets/d/10At27D0Rhky3h1nIIxZULomlb8NOgZGorcXb3jYX2W4/edit?usp=drivesdk" target="_blank" class="sheet-link"><span style="font-size:22px">📊</span><div><div style="color:var(--white);margin-bottom:2px">Inflectiv AI Campaign</div><div style="font-size:11px;color:var(--gold)">View Live Report →</div></div></a>
+        <a href="https://docs.google.com/spreadsheets/d/10Ap-TL1VMhN4Hywg7i_eqat00RGm78kpNNjgEFn0bAg/edit?usp=drivesdk" target="_blank" class="sheet-link"><span style="font-size:22px">📊</span><div><div style="color:var(--white);margin-bottom:2px">Campaign Report #2</div><div style="font-size:11px;color:var(--gold)">View Live Report →</div></div></a>
+        <a href="https://docs.google.com/spreadsheets/d/10aNrwqnCwyTfOp4bM_STnXM35SD0i79v-a1_AfjabUs/edit?usp=drivesdk" target="_blank" class="sheet-link"><span style="font-size:22px">📊</span><div><div style="color:var(--white);margin-bottom:2px">Campaign Report #3</div><div style="font-size:11px;color:var(--gold)">View Live Report →</div></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRICING ══ -->
+<section id="pricing">
+  <div class="section-wrap reveal">
+    <div class="container">
+      <div class="eyebrow">Investment</div>
+      <h2 class="sec-title">Transparent <span>Pricing</span></h2>
+      <p class="sec-sub" style="margin-bottom:48px">Choose the package that fits your brand. All packages are fully customizable. Weekly or monthly billing available.</p>
+      <div class="pricing-grid">
+        <div class="pplan">
+          <div class="plan-tag">🌱 Starter</div>
+          <div class="plan-name">Growth</div>
+          <div class="plan-price">$500</div>
+          <div class="plan-period">per month</div>
+          <div class="plan-desc">Perfect for new brands and project launches looking to build presence and grow their audience fast.</div>
+          <ul class="plan-features">
+            <li><span class="ck">✓</span>Community Management (12hrs/day)</li>
+            <li><span class="ck">✓</span>40 Social Media Ambassadors</li>
+            <li><span class="ck">✓</span>25 Content Posts Daily</li>
+            <li><span class="ck">✓</span>CMC Votes & Reactions</li>
+            <li><span class="ck">✓</span>100 Daily Outreach Actions</li>
+            <li><span class="ck">✓</span>Weekly Reporting Sheet</li>
+            <li><span class="ck">✓</span>2 Senior Moderators</li>
+            <li class="off"><span class="ck">✕</span>Influencer Campaigns</li>
+            <li class="off"><span class="ck">✕</span>SEO & PR Coverage</li>
+          </ul>
+          <a href="https://t.me/alexiaforge" target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center">Get Started</a>
+        </div>
+        <div class="pplan feat">
+          <div class="plan-tag">🔥 Best Value</div>
+          <div class="plan-name">Professional</div>
+          <div class="plan-price">$850</div>
+          <div class="plan-period">per month</div>
+          <div class="plan-desc">Our most popular package. Full-stack marketing for brands serious about dominating their market.</div>
+          <ul class="plan-features">
+            <li><span class="ck">✓</span>24/7 Community Management</li>
+            <li><span class="ck">✓</span>70+ Social Media Ambassadors</li>
+            <li><span class="ck">✓</span>50 Content Posts Daily</li>
+            <li><span class="ck">✓</span>CMC Full Coverage</li>
+            <li><span class="ck">✓</span>Multi-Platform Amplification</li>
+            <li><span class="ck">✓</span>200 Daily Outreach Actions</li>
+            <li><span class="ck">✓</span>4 Senior Moderators</li>
+            <li><span class="ck">✓</span>Daily Proof Sheets</li>
+            <li><span class="ck">✓</span>Influencer Outreach (3/month)</li>
+          </ul>
+          <a href="https://t.me/alexiaforge" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center">Get Started</a>
+        </div>
+        <div class="pplan">
+          <div class="plan-tag">👑 Enterprise</div>
+          <div class="plan-name">Dominator</div>
+          <div class="plan-price">$1,200</div>
+          <div class="plan-period">per month</div>
+          <div class="plan-desc">For established brands ready to dominate globally. Maximum reach, premium placement, dedicated team.</div>
+          <ul class="plan-features">
+            <li><span class="ck">✓</span>Everything in Professional</li>
+            <li><span class="ck">✓</span>100+ Ambassadors</li>
+            <li><span class="ck">✓</span>400 Daily Outreach Actions</li>
+            <li><span class="ck">✓</span>Dedicated Account Manager</li>
+            <li><span class="ck">✓</span>Influencer Campaigns (10/month)</li>
+            <li><span class="ck">✓</span>PR & News Coverage</li>
+            <li><span class="ck">✓</span>SEO Strategy & Execution</li>
+            <li><span class="ck">✓</span>Custom Strategy Sessions</li>
+            <li><span class="ck">✓</span>Real-Time Analytics Dashboard</li>
+          </ul>
+          <a href="https://t.me/alexiaforge" target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center">Get Started</a>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:24px;font-size:13px;color:var(--silver2)">All packages fully customizable. <a href="https://t.me/alexiaforge" target="_blank" style="color:var(--gold)">Contact us</a> for a custom quote tailored to your brand and budget.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REVIEWS ══ -->
+<section id="reviews">
+  <div class="section-wrap reveal">
+    <div class="container">
+      <div class="eyebrow">Client Reviews</div>
+      <h2 class="sec-title">What Our <span>Clients Say</span></h2>
+      <p class="sec-sub" style="margin-bottom:48px">Real feedback from real brands. We let our results do the talking.</p>
+      <div class="rev-grid">
+        <div class="rcard">
+          <div class="verified">✓ Verified</div>
+          <div class="rcard-top">
+            <div class="rcard-avatar">MK</div>
+            <div><div class="rcard-author">Marcus K.</div><div class="rcard-role">Founder, Inflectiv AI</div></div>
+          </div>
+          <div class="rcard-stars">★★★★★</div>
+          <div class="rcard-text">"Wolf Shills completely transformed our community. Within the first week we saw a 300% jump in Telegram activity and our CMC rankings improved dramatically. The daily Google Sheets reports gave us full confidence — we knew exactly what was being done every single day."</div>
+          <div class="rcard-project">🤖 Inflectiv AI</div>
+        </div>
+        <div class="rcard">
+          <div class="verified">✓ Verified</div>
+          <div class="rcard-top">
+            <div class="rcard-avatar">SR</div>
+            <div><div class="rcard-author">Sophie R.</div><div class="rcard-role">CMO, Encore DeFi</div></div>
+          </div>
+          <div class="rcard-stars">★★★★★</div>
+          <div class="rcard-text">"We'd worked with three other agencies before Wolf Shills and none of them came close. The outreach campaign was phenomenal — we saw real investors joining our community, not bots. Their team genuinely understands the crypto space and what moves communities."</div>
+          <div class="rcard-project">💎 Encore DeFi</div>
+        </div>
+        <div class="rcard">
+          <div class="verified">✓ Verified</div>
+          <div class="rcard-top">
+            <div class="rcard-avatar">AJ</div>
+            <div><div class="rcard-author">Ahmed J.</div><div class="rcard-role">CEO, Metaverse Estate</div></div>
+          </div>
+          <div class="rcard-stars">★★★★★</div>
+          <div class="rcard-text">"The transparency alone is worth the price. Every morning I wake up to a Google Sheet showing exactly what was done overnight. Our Twitter following grew by 4,200 in 30 days and Discord went from 800 to 6,500 members. Results that speak for themselves."</div>
+          <div class="rcard-project">🌐 Metaverse Estate</div>
+        </div>
+        <div class="rcard">
+          <div class="verified">✓ Verified</div>
+          <div class="rcard-top">
+            <div class="rcard-avatar">LW</div>
+            <div><div class="rcard-author">Lena W.</div><div class="rcard-role">Brand Manager, Lumichill</div></div>
+          </div>
+          <div class="rcard-stars">★★★★★</div>
+          <div class="rcard-text">"I was skeptical at first but the results blew me away. Wolf Shills ran our launch campaign and we sold out our first collection within 48 hours. Their multi-platform approach is exactly what modern brands need. Will definitely be using them again."</div>
+          <div class="rcard-project">💡 Lumichill</div>
+        </div>
+        <div class="rcard">
+          <div class="verified">✓ Verified</div>
+          <div class="rcard-top">
+            <div class="rcard-avatar">TN</div>
+            <div><div class="rcard-author">Tom N.</div><div class="rcard-role">Project Lead, Tela Coin</div></div>
+          </div>
+          <div class="rcard-stars">★★★★★</div>
+          <div class="rcard-text">"Fast, professional and genuinely effective. We hired Wolf Shills two weeks before our token launch and it made all the difference. The community was buzzing, CMC votes were through the roof, and our launch day volume exceeded every target we set."</div>
+          <div class="rcard-project">🪙 Tela Coin</div>
+        </div>
+        <div class="rcard">
+          <div class="verified">✓ Verified</div>
+          <div class="rcard-top">
+            <div class="rcard-avatar">DP</div>
+            <div><div class="rcard-author">David P.</div><div class="rcard-role">Director, Punkvism</div></div>
+          </div>
+          <div class="rcard-stars">★★★★★</div>
+          <div class="rcard-text">"What sets Wolf Shills apart is that they actually care about your project's success. They took time to understand our brand before launching anything. The custom strategy they built for us drove over 15,000 new followers across platforms in our first month."</div>
+          <div class="rcard-project">🎨 Punkvism</div>
+        </div>
+      </div>
+      <div style="background:var(--bg3);border:1px solid var(--border2);border-radius:12px;padding:24px;text-align:center;margin-top:16px">
+        <p style="font-size:14px;color:var(--silver)">📸 <strong style="color:var(--white)">Screenshot reviews & detailed campaign proofs available on request.</strong> <a href="https://t.me/alexiaforge" target="_blank" style="color:var(--gold)">Contact us on Telegram</a> to see full case studies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="section-wrap reveal">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="eyebrow">Get In Touch</div>
+          <h2 class="sec-title">Ready to <span>Dominate?</span></h2>
+          <p>Whether you're launching a new brand, scaling an existing business, or need to supercharge your online presence — the Wolf Shills pack is ready to hunt for you.</p>
+          <p>Reach out for a <strong style="color:var(--white)">free consultation and custom strategy</strong> tailored to your brand's goals. We respond within 60 minutes.</p>
+          <div class="clinks">
+            <a href="https://t.me/alexiaforge" target="_blank" class="clink"><span class="clink-icon">✈️</span><div><div class="clink-lbl">Telegram</div><div>@alexiaforge</div></div></a>
+            <a href="https://t.me/Callmefaiziii" target="_blank" class="clink"><span class="clink-icon">✈️</span><div><div class="clink-lbl">Telegram</div><div>@Callmefaiziii</div></div></a>
+            <a href="https://t.me/cryptowolves02" target="_blank" class="clink"><span class="clink-icon">🐺</span><div><div class="clink-lbl">Community</div><div>@cryptowolves02</div></div></a>
+          </div>
+        </div>
+        <div class="contact-box">
+          <div class="cb-icon">🐺</div>
+          <div class="cb-title">Join the Pack</div>
+          <div class="cb-desc">100+ specialists ready to grow your brand globally. Fast onboarding. Full transparency. Proven results with top brands worldwide.</div>
+          <div class="cb-btns">
+            <a href="https://t.me/alexiaforge" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center">Message @alexiaforge →</a>
+            <a href="https://t.me/Callmefaiziii" target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center">Message @Callmefaiziii →</a>
+          </div>
+          <p style="font-size:12px;color:var(--silver2);margin-top:16px">⚡ Usually responds within 60 minutes</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">🐺 Wolf<em>Shills</em></div>
+    <div class="footer-sub">Premium Global Marketing Agency — 100+ Specialists Worldwide</div>
+    <ul class="footer-nav">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="https://t.me/alexiaforge" target="_blank">Telegram</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Wolf Shills. All rights reserved. Premium Global Marketing Agency.</div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Nav active
+const secs=document.querySelectorAll('section[id]');
+const navAs=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-100)c=s.getAttribute('id')});navAs.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+c?'var(--gold)':''})});
+
+// Welcome popup after 3s
+let popShown=false;
+setTimeout(()=>{if(!popShown){document.getElementById('welcomePopup').classList.add('show');popShown=true}},3000);
+
+// Exit intent popup
+let exitShown=false;
+document.addEventListener('mouseleave',e=>{if(e.clientY<=0&&!exitShown&&popShown){document.getElementById('exitPopup').classList.add('show');exitShown=true}});
+
+function closePopup(id){document.getElementById(id).classList.remove('show')}
+
+// Close popups on overlay click
+document.querySelectorAll('.popup-overlay,.exit-popup').forEach(el=>{el.addEventListener('click',e=>{if(e.target===el)el.classList.remove('show')})});
+</script>
+</body>
+</html>
